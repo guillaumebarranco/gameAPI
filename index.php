@@ -42,6 +42,15 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 				margin: 0 auto;
 			}
 
+			img, iframe {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			img {
+				max-height: 300px;
+			}
+
 		</style>
 
 	</head>
@@ -78,10 +87,15 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 			<ul></ul>
 		</div>
 
-		<img src="" class="picture" width="300" alt="">
+		<img src="" class="picture" alt="">
+		<iframe frameborder="0" width="480" height="300" src="" allowfullscreen></iframe>
 	</div>
 
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="js/auth.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
+
+
 	<script>var testing = false; var testing_dev = true;</script>
 	<script src="js/test.js"></script>
 	<script src="js/main.js"></script>

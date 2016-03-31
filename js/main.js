@@ -50,6 +50,7 @@ $(document).ready(function() {
 		$('.game_trophies .number').html("You have "+game.fromUser.progress+"% of this game trophies.");
 
 		getGameAttributesFromGiantBombAPI(gameName);
+		search2(gameName);
 	}
 
 
@@ -125,6 +126,49 @@ $(document).ready(function() {
 
 		$('.game .description').html(realText);
 		$('.game .picture').attr('src', game.image.medium_url);
+	}
+
+
+
+
+
+	// Search for a specified string.
+	function search() {
+	  var q = $('#query').val();
+	  q = "naruto";
+	  console.log(gapi);
+
+	  var request = gapi.client.youtube.search.list({
+	    q: q,
+	    part: 'snippet'
+	  });
+
+	  request.execute(function(response) {
+	    var str = JSON.stringify(response.result);
+	    $('#search-container').html('<pre>' + str + '</pre>');
+	  });
+	}
+
+	function search2(game) {
+
+		game = game + ' game trailer';
+
+		$.ajax({
+			method: 'GET',
+			// url: "https://www.googleapis.com/youtube/v3/search?part=snippet&q=skateboarding+dog",
+			url: "https://api.dailymotion.com/videos?fields=id,url%2Ctitle&country=it&search="+game+"&page=2&limit=50",
+			dataType: 'jsonp',
+			jsonpCallback: "localJsonpCallback",
+
+			success: function(response) {
+				console.log(response.list[0]);
+				$('iframe').attr('src', "//www.dailymotion.com/embed/video/"+response.list[0].id);
+			},
+
+			error: function(err) {
+				console.log(err);
+			}
+		});
 	}
 
 });
