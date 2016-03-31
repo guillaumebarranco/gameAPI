@@ -45,9 +45,9 @@ $(document).ready(function() {
 
 		// console.log('game', game);
 
-		$('.getFromTrophies').append("From the "+response.trophyTitles.length+ " games which you got trophies, we selected one random which is : <b>"+gameName+"</b>");
+		$('.getFromTrophies').html("From the "+response.trophyTitles.length+ " games which you got trophies, we selected one random which is : <b>"+gameName+"</b>");
 
-		$('.game_trophies .number').append("You have "+game.fromUser.progress+"% of this game trophies.");
+		$('.game_trophies .number').html("You have "+game.fromUser.progress+"% of this game trophies.");
 
 		getGameAttributesFromGiantBombAPI(gameName);
 	}
@@ -118,8 +118,8 @@ $(document).ready(function() {
 
 		console.log(game);
 
-		$('.game .title').append(game.name);
-		$('.game .description').append(game.description);
+		$('.game .title').html(game.name);
+		$('.game .description').html(game.description);
 
 		var realText = $('.game div p').eq(0).html();
 
