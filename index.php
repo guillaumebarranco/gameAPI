@@ -28,7 +28,7 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 	<head>
 		<title>API Mix</title>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="../bower_components/foundation/css/foundation.min.css">
+		<link rel="stylesheet" href="bower_components/foundation/css/foundation.min.css">
 		<link rel="stylesheet" href="css/loader.css">
 
 		<style>
@@ -91,7 +91,7 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 		<iframe frameborder="0" width="480" height="300" src="" allowfullscreen></iframe>
 	</div>
 
-	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<!-- <script src="js/auth.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
 
