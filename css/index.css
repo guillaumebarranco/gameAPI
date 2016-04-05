@@ -1,0 +1,30 @@
+body {
+	padding: 10px;
+}
+
+form {
+	width: 600px;
+	margin: 0 auto;
+}
+
+img, iframe {
+	display: inline-block;
+	vertical-align: top;
+}
+
+img {
+	max-height: 300px;
+}
+
+.gamesList li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 20px;
+}
+
+.game {
+	width: 85%;
+	margin: 0 auto;
+	max-width: 800px;
+	padding-bottom: 50px;
+}

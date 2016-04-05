@@ -23,36 +23,16 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 
 	<head>
 		<title>API Mix</title>
+
 		<meta charset="utf-8" />
+
 		<link rel="stylesheet" href="bower_components/foundation/css/foundation.min.css">
 		<link rel="stylesheet" href="css/loader.css">
-
-		<style>
-
-			body {
-				padding: 10px;
-			}
-			
-			form {
-				width: 600px;
-				margin: 0 auto;
-			}
-
-			img, iframe {
-				display: inline-block;
-				vertical-align: top;
-			}
-
-			img {
-				max-height: 300px;
-			}
-
-		</style>
-
+		<link rel="stylesheet" href="css/index.css">
 	</head>
 
 <body>
@@ -71,15 +51,25 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 
 	<form action="" method="post">
 		<h3>Please enter your Playstation Network username</h3>
-		<input type="text" />
+		<input type="text" name="username" value="guillaumanga" />
+
+		<div style="width:50px;">
+			<label for="limit">Limit</label>
+			<input type="number" name="limit" value="2"/>
+		</div>
+
 		<button>Rechercher</button>
 	</form>
 
 	<p class="getFromTrophies"></p>
 
+	<ul class="gamesList"></ul>
+
 	<div class="game">
+
 		<h2 class="title"></h2>
 		<div class="description"></div>
+
 		<br />
 
 		<div class="game_trophies">
@@ -87,7 +77,6 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 			<ul></ul>
 		</div>
 
-		<img src="" class="picture" alt="">
 		<iframe frameborder="0" width="480" height="300" src="" allowfullscreen></iframe>
 	</div>
 
@@ -95,8 +84,6 @@ echo "Parmi les ".count($response->trophyTitles). " jeux où vous avez obtenu de
 	<!-- <script src="js/auth.js"></script>
 	<script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
 
-
-	<script>var testing = false; var testing_dev = true;</script>
 	<script src="js/test.js"></script>
 	<script src="js/main.js"></script>
 
