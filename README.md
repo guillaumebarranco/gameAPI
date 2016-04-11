@@ -10,4 +10,10 @@ In next release, you will find very nice to discover new games associated with y
 
 Enjoy !
 
+### Installation
+	git clone https://github.com/guillaumebarranco/gameAPI.git
+	npm i -g bower
+	cd gameAPI
+	bower install
+
 ### You can check the working thing at : http://webarranco.fr/gameAPI/
