@@ -19,6 +19,17 @@ $(document).ready(function() {
 		getRandomGameFromPSNTrophies(username, limit);
 	});
 
+	$('.presentation .arrow').on('click', function() {
+
+		if($('.presentation').hasClass('active')) {
+			$('.presentation').removeClass('active');
+			$(this).text('>');
+		} else {
+			$('.presentation').addClass('active');
+			$(this).text('<');
+		}
+	});
+
 	function rand(min, max) {
 		return the_random = Math.floor(Math.random() * (max - min + 1)) + min;
 	}
@@ -43,19 +54,6 @@ $(document).ready(function() {
 	}
 
 	function handleTrophiesResponse(response, limit) {
-		// console.log('PSN', response);
-
-		// var game = response.trophyTitles[rand(0, response.trophyTitles.length - 1)];
-		// var gameName = game.trophyTitleName;
-
-		// console.log('game', game);
-
-		// $('.getFromTrophies').html("From the "+response.trophyTitles.length+ " games which you got trophies, we selected one random which is : <b>"+gameName+"</b>");
-
-		// $('.game_trophies .number').html("You have "+game.fromUser.progress+"% of this game trophies.");
-
-		// getGameAttributesFromGiantBombAPI(gameName);
-		// search2(gameName);
 
 		$('.getFromTrophies').html("You got trophies in these "+response.trophyTitles.length+" games. Please pick one to see his trailer and description.");
 
@@ -137,7 +135,7 @@ $(document).ready(function() {
 				console.log(response);
 
 				if(typeof response.results[0] !== "undefined") {
-					$('.'+gameClass).append('<img class="gamePicture" width="100" src="'+response.results[0].image.medium_url+'">');
+					$('.'+gameClass).prepend('<img class="gamePicture" width="100" src="'+response.results[0].image.medium_url+'">');
 					$('.'+gameClass).attr('data-description', response.results[0].description);
 					$('.'+gameClass).attr('data-title', response.results[0].name);
 				}

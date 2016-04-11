@@ -28,3 +28,41 @@ img {
 	max-width: 800px;
 	padding-bottom: 50px;
 }
+
+.presentation {
+	position: absolute;
+	background-color: #008CBA;
+	color: #fff;
+	width: 500px;
+	height: 100vh;
+	top: 0;
+	left: -495px;
+	padding: 10px 0 0 10px;
+	transition: 0.4s;
+	border-right: solid 5px #008CBA;
+}
+
+.presentation.active {
+	left: 0;
+}
+
+.presentation .arrow {
+	position: absolute;
+    top: 50%;
+    right: -33px;
+    background-color: #008CBA;
+    color: #fff;
+    font-size: 2em;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding-left: 16px;
+    width: 40px;
+    height: 48px;
+    margin-top: -24px;
+    cursor: pointer;
+}
+
+h1 {
+	color: #fff;
+	font-size: 2em;
+}
