@@ -16,10 +16,39 @@ img {
 	max-height: 300px;
 }
 
-.gamesList li {
+.gamesList>li {
 	display: inline-block;
+	vertical-align: top;
 	list-style: none;
 	margin-left: 20px;
+	width: 250px;
+}
+
+.gamesList li button {
+	width: 100%;
+}
+
+.gamesList li ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 230px;
+}
+
+.gamesList li ul li {
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+	margin-left: 20px;
+}
+
+.gamesList li ul li:first-child {
+	margin: 0;
+}
+
+.divPicture {
+	margin: 10px 0;
+	height: 140px;
+	text-align: center;
 }
 
 .game {

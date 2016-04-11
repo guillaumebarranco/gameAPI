@@ -22,9 +22,9 @@
 
 			The principle of this little application is simple. You just have to possess a Playstation Network account and fill the username field. <br><br>
 
-			Click on the search button with the limit of games you want (the more the longest to wait) and our service will get your games with trophies information, and also provide you some games related to what you played. <br><br>
+			Click on the search button with the limit of games you want (the more the longest to wait) and our service will get your games with trophies information, game description and also the trailer.<br><br>
 
-			Very nice to discover new games associated with your own likings ;) <br><br>
+			In next release, you will find very nice to discover new games associated with your own likings ;) <br><br>
 
 			Enjoy !
 		</p>
