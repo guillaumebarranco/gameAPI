@@ -16,4 +16,4 @@ Enjoy !
 	cd gameAPI
 	bower install
 
-### You can check the working thing at : http://webarranco.fr/gameAPI/
+### You can check the working thing at : http://lab.webarranco.fr/gameapi/
